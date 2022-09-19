@@ -81,7 +81,11 @@
 }
 
 
-
+.gameboard {
+  text-align:center;
+  font-size:50px;
+  line-height:100px;
+}
 
 
 .game {
@@ -96,13 +100,20 @@
   border-left:none;
 }
 
-.left-top{
+.left-top, .mid-top, .right-top{
   border-top:none;
 }
 
+.right-top, .right-mid, .right-bottom{
+  border-right:none;
+}
+
+.left-bottom, .mid-bottom, .right-bottom {
+  border-bottom:none;
+}
 
 body {
-
+  font-family:sans-serif;
 }
 
 
