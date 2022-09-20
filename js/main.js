@@ -1,5 +1,5 @@
 const gameBoard = {
-    game: [{topLeft: "", topMid: "", topBottom: "", midTop: "", midMid: "", midBottom: "", rightTop: "", rightMid: "", rightBottom: ""}],
+    game: [],
     player1: "X",
     player2: "O"
 
@@ -13,9 +13,11 @@ grid.forEach(square => {
 })
 
 function addMove(e){
+    let move = e.target.classList[0]
+    let makeMove = gameBoard.game
     if(e.target.textContent === ""){
         e.target.textContent = gameBoard.player1
-        gameBoard.game.push()
+        gameBoard.game.push({move})
     }else{
         return
     }
