@@ -21,5 +21,8 @@ function addMove(e){
     }else{
         return
     }
+    for (const property in makeMove){
+        console.log(makeMove[property])
+    }
 }
 
