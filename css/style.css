@@ -29,6 +29,15 @@
   margin-top:0;
 }
 
+.buttons{
+  display:flex;
+  margin:0 auto;
+}
+
+.restart{
+  margin:30px auto;
+}
+
 .gameboard {
   height:75vh;
   display:grid;

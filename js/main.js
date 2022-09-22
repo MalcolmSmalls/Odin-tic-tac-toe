@@ -18,6 +18,9 @@ const gameBoard = {
 
 const winAnnouncement = document.querySelector('.winnerCongrats')
 const grid = document.querySelectorAll('.game');
+const restartButton = document.querySelector('.restart')
+
+
 
 grid.forEach(square => {
     square.addEventListener('click', addMove)
@@ -66,3 +69,15 @@ const scoreBoard = () => {
         winAnnouncement.textContent = "Player 2 Wins!"
     }
 }
+
+const clearAll = () => {
+    gameBoard.gameO = []
+    gameBoard.gameX = []
+    grid.forEach(square => {
+        square.textContent = ""
+    })
+    winAnnouncement.textContent = ""
+}
+
+restartButton.addEventListener('click', clearAll)
+
