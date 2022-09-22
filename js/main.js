@@ -3,7 +3,11 @@ const gameBoard = {
         winning1: ['leftTop', 'midTop', 'rightTop'],
         winning2: ['leftTop', 'midMid', 'rightBottom'],
         winning3: ['leftTop', 'leftMid', 'leftBottom'],
-        winning4: []
+        winning4: ['leftMid','midMid','rightMid'],
+        winning5: ['leftBottom', 'midMid','rightTop'],
+        winning6: ['leftBottom', 'midBottom', 'rightBottom'],
+        winning7: ['midTop', 'midMid', 'midBottom'],
+        winning8: ['rightTop', 'rightMid', 'rightBottom']
     }],
     player1: "X",
     player2: "O"
