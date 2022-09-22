@@ -22,7 +22,11 @@ function addMove(e){
         return
     }
     for (const property in makeMove){
+<<<<<<< HEAD
         console.log(makeMove[property].move === 'leftMid')
+=======
+        console.log(makeMove[property])
+>>>>>>> 0dcae0ad97ae8f325fe6b266ff1c20acbf1124f2
     }
 }
 
