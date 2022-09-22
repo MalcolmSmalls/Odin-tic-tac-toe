@@ -1,0 +1,133 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+
+.gameboard {
+  height:100vh;
+  display:grid;
+  grid-template:100px 100px 100px / 100px 100px 100px;
+  align-content:center;
+  justify-content:Center;
+}
+
+
+
+
+.leftTop {
+	grid-row:1;
+	grid-column:1;
+}
+
+.leftMid {
+	grid-row:2;
+	grid-column:1;
+}
+
+.leftBottom {
+	grid-row:3;
+	grid-column:1;
+
+}
+
+.midTop {
+
+	grid-row:1;
+	grid-column:2;
+}
+
+.midMid {
+	grid-row:2;
+	grid-column:2;
+}
+
+.midBottom {
+	grid-row:3;
+	grid-column:2;
+}
+
+.rightTop {
+	grid-row:1;
+	grid-column:3;
+}
+
+.rightMid {
+	grid-row:2;
+	grid-column:3;
+}
+
+.rightBottom {
+	grid-row:3;
+	grid-column:3;
+}
+
+
+.gameboard {
+  text-align:center;
+  font-size:50px;
+  line-height:100px;
+}
+
+
+.game {
+  height:100px;
+  width:100px;
+  border:1px black solid;
+
+}
+
+
+.leftTop, .leftMid, .leftBottom{
+  border-left:none;
+}
+
+.leftTop, .midTop, .rightTop{
+  border-top:none;
+}
+
+.rightTop, .rightMid, .rightBottom{
+  border-right:none;
+}
+
+.leftBottom, .midBottom, .rightBottom {
+  border-bottom:none;
+}
+
+body {
+  font-family:sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
