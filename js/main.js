@@ -22,6 +22,7 @@ function addMove(e){
         return
     }
     for (const property in makeMove){
+        console.log(makeMove[property].move === 'leftMid')
         if(makeMove[property].move === 'leftMid' && makeMove[property].move === 'midMid' && makeMove[property].move === 'rightMid'){
             alert('You Win!')
         }
