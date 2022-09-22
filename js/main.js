@@ -16,7 +16,7 @@ const gameBoard = {
 
 }
 
-
+const winAnnouncement = document.querySelector('.winnerCongrats')
 const grid = document.querySelectorAll('.game');
 
 grid.forEach(square => {
@@ -61,8 +61,8 @@ const scoreBoard = () => {
     let winO7 = gameBoard.winner[6].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
     let winO8 = gameBoard.winner[7].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
     if(winX1 === true || winX2 === true || winX3 === true || winX4 === true || winX5 === true || winX6 === true || winX7 === true || winX8 === true){
-        alert('YOU WIN!')
+        winAnnouncement.textContent = "Player 1 Wins!"
     }else if(winO1 === true || winO2 === true || winO3 === true || winO4 === true || winO5 === true || winO6 === true || winO7 === true || winO8 === true){
-        alert('YOU LOSE!')
+        winAnnouncement.textContent = "Player 2 Wins!"
     }
 }
