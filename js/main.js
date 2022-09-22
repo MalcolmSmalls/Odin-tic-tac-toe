@@ -38,30 +38,31 @@ function addMove(e){
 
     scoreBoard()
 
-    // makeMove.forEach(item =>{
-    //     console.log(item)
-    // })
 
-
-    // for (const property in makeMove){
-
-    //     if(makeMove[property].move === 'leftMid' && makeMove[property].move === 'midMid' && makeMove[property].move === 'rightMid'){
-    //         alert('You Win!')
-    //     }
-    // }
 }
 
 const scoreBoard = () => {
     let makeMoveX = gameBoard.gameX
-    let win1 = gameBoard.winner[0].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
-    let win2 = gameBoard.winner[1].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
-    let win3 = gameBoard.winner[2].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
-    let win4 = gameBoard.winner[3].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
-    let win5 = gameBoard.winner[4].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
-    let win6 = gameBoard.winner[5].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
-    let win7 = gameBoard.winner[6].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
-    let win8 = gameBoard.winner[7].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
-    if(win1 === true || win2 === true || win3 === true || win4 === true || win5 === true || win6 === true || win7 === true || win8 === true){
+    let makeMoveO = gameBoard.gameO
+    let winX1 = gameBoard.winner[0].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
+    let winX2 = gameBoard.winner[1].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
+    let winX3 = gameBoard.winner[2].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
+    let winX4 = gameBoard.winner[3].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
+    let winX5 = gameBoard.winner[4].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
+    let winX6 = gameBoard.winner[5].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
+    let winX7 = gameBoard.winner[6].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
+    let winX8 = gameBoard.winner[7].winCombo.every(winningMovement => makeMoveX.includes(winningMovement))
+    let winO1 = gameBoard.winner[0].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
+    let winO2 = gameBoard.winner[1].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
+    let winO3 = gameBoard.winner[2].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
+    let winO4 = gameBoard.winner[3].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
+    let winO5 = gameBoard.winner[4].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
+    let winO6 = gameBoard.winner[5].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
+    let winO7 = gameBoard.winner[6].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
+    let winO8 = gameBoard.winner[7].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
+    if(winX1 === true || winX2 === true || winX3 === true || winX4 === true || winX5 === true || winX6 === true || winX7 === true || winX8 === true){
         alert('YOU WIN!')
+    }else if(winO1 === true || winO2 === true || winO3 === true || winO4 === true || winO5 === true || winO6 === true || winO7 === true || winO8 === true){
+        alert('YOU LOSE!')
     }
 }
