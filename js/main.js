@@ -16,11 +16,26 @@ const gameBoard = {
 
 }
 
+
+
 const winAnnouncement = document.querySelector('.winnerCongrats')
 const grid = document.querySelectorAll('.game');
 const restartButton = document.querySelector('.restart')
+const submitName = document.querySelector('.submit')
+const player1 = document.getElementById('player1')
+const player2 = document.getElementById('player2')
+const playerAnnouncement = document.querySelector('.playerAnnouncement')
+let player1Name = ""
+let player2Name = ""
 
+function getName() {
+    player1Name = player1.value
+    player2Name = player2.value
+    playerAnnouncement.textContent = `${player1Name}: X ${player2Name}: O`
 
+}
+
+submitName.addEventListener('click', getName)
 
 grid.forEach(square => {
     square.addEventListener('click', addMove)
@@ -64,9 +79,9 @@ const scoreBoard = () => {
     let winO7 = gameBoard.winner[6].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
     let winO8 = gameBoard.winner[7].winCombo.every(winningMovement => makeMoveO.includes(winningMovement))
     if(winX1 === true || winX2 === true || winX3 === true || winX4 === true || winX5 === true || winX6 === true || winX7 === true || winX8 === true){
-        winAnnouncement.textContent = "Player 1 Wins!"
+        winAnnouncement.textContent = `${player1Name} Wins!`
     }else if(winO1 === true || winO2 === true || winO3 === true || winO4 === true || winO5 === true || winO6 === true || winO7 === true || winO8 === true){
-        winAnnouncement.textContent = "Player 2 Wins!"
+        winAnnouncement.textContent = `${player2Name} Wins!`
     }
 }
 
