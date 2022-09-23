@@ -20,7 +20,15 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
+.players {
+  display:flex;
+  justify-content:center;
+}
 
+.players *{
+  margin-right: 10px;
+  margin-top:40px;
+}
 .winnerCongrats{
   font-size:30px;
   font-weight:bold;
